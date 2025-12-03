@@ -42,8 +42,8 @@ function showScreen(screenId) {
 }
 
 function updateQuantity() {
-  const qtyEl = document.getElementById('qty');
-  if (qtyEl) qtyEl.textContent = quantity;
+  // Quantidade agora é controlada apenas pelo SVG
+  console.log(`Quantidade: ${quantity}`);
 }
 
 // Eventos com delegation

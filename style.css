@@ -170,19 +170,6 @@ body {
   z-index: 100;
 }
 
-/* Display de quantidade sobreposto ao SVG */
-.qty-overlay {
-  position: absolute;
-  top: 685px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 36px;
-  font-weight: 700;
-  color: white;
-  z-index: 150;
-  pointer-events: none;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
 
 /* Responsivo */
 @media (max-width: 414px) {
