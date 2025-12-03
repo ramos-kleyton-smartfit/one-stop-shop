@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Academia App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+</head>
+<body>
+  <div id="app">
+    <!-- Tela 1: Home -->
+    <div id="screen-home" class="screen active">
+      <div class="header">
+        <svg class="logo-smartfit" width="40" height="40" viewBox="0 0 40 40">
+          <path d="M20 5 L25 15 L20 12 L15 15 Z" fill="#FFC107"/>
+        </svg>
+        <div class="header-icons">
+          <div class="icon-bell">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <div class="icon-profile">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23667eea'/%3E%3C/svg%3E" alt="Profile">
+          </div>
+        </div>
+      </div>
+
+      <div class="stories-row">
+        <div class="story-item add">
+          <div class="story-circle">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+          </div>
+        </div>
+        <div class="story-item" id="story-aline">
+          <div class="story-circle has-story">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ccircle cx='35' cy='35' r='33' fill='%23E8B4D4'/%3E%3C/svg%3E" alt="Aline">
+          </div>
+          <span class="story-name">Aline</span>
+          <span class="story-status online">● agora</span>
+        </div>
+        <div class="story-item">
+          <div class="story-circle has-story">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ccircle cx='35' cy='35' r='33' fill='%234A90E2'/%3E%3C/svg%3E" alt="Vitor">
+          </div>
+          <span class="story-name">Vitor</span>
+          <span class="story-time">2h</span>
+        </div>
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ccircle cx='35' cy='35' r='33' fill='%237ED321'/%3E%3C/svg%3E" alt="João">
+          </div>
+          <span class="story-name">João</span>
+          <span class="story-time">2h</span>
+        </div>
+        <div class="story-item">
+          <div class="story-circle">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Ccircle cx='35' cy='35' r='33' fill='%23F5A623'/%3E%3C/svg%3E" alt="Camilla">
+          </div>
+          <span class="story-name">Camilla</span>
+        </div>
+      </div>
+
+      <section class="section-training">
+        <div class="section-header">
+          <h2>Seu treino</h2>
+          <a href="#" class="link-more">Mais treinos <span class="arrow">→</span></a>
+        </div>
+        <div class="training-card">
+          <div class="training-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Crect width='100' height='100' fill='%23FFA000'/%3E%3C/svg%3E" alt="Treino">
+          </div>
+          <div class="badge-letter">B</div>
+          <div class="training-info">
+            <h3>Bíceps e Tríceps</h3>
+            <p>35 min · 12 exercícios</p>
+          </div>
+          <button class="btn-play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="black">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-body">
+        <div class="section-header">
+          <h2>Seu corpo</h2>
+          <a href="#" class="link-more">Ver detalhes <span class="arrow">→</span></a>
+        </div>
+        <div class="body-card">
+          <div class="stats-row">
+            <div class="stat">
+              <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="#2196F3">
+                <path d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z"/>
+              </svg>
+              <div class="stat-content">
+                <span class="stat-value">1457 kcal</span>
+                <span class="stat-label">Meta 1500/dia</span>
+              </div>
+            </div>
+            <div class="stat">
+              <svg class="stat-icon" width="20" height="20" viewBox="0 0 24 24" fill="#2196F3">
+                <path d="M14.12 10H19V8.2h-3.62l-1.5-3h-1.05l-1.5 3H7.5v1.8h4.93L14.12 10zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              </svg>
+              <div class="stat-content">
+                <span class="stat-value">7.823 passos</span>
+                <span class="stat-label">Meta 5000/dia</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="performance-section">
+            <div class="performance-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFC107">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+              </svg>
+              <span class="performance-title">Melhore a sua performance!</span>
+            </div>
+            <p class="performance-text">Aumente seu gasto calórico e acompanhe os níveis de massa magra e gordura corporal.</p>
+            
+            <div class="progress-chart">
+              <svg width="140" height="140" viewBox="0 0 140 140">
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#333" stroke-width="8"/>
+                <circle cx="70" cy="70" r="60" fill="none" stroke="#E53935" stroke-width="8" stroke-dasharray="188 377" transform="rotate(-90 70 70)"/>
+                <text x="70" y="65" text-anchor="middle" fill="white" font-size="24" font-weight="bold">68.5%</text>
+                <text x="70" y="85" text-anchor="middle" fill="#888" font-size="12">IMC</text>
+              </svg>
+              <div class="chart-legend">
+                <div class="legend-item">
+                  <span class="legend-dot" style="background: #E53935;"></span>
+                  <span>Gordura</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot" style="background: #FFC107;"></span>
+                  <span>Músculo</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot" style="background: #4CAF50;"></span>
+                  <span>Água</span>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn-unlock">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="black">
+                <path d="M12 17c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm6-9h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6h1.9c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H6V10h12v10z"/>
+              </svg>
+              Liberar
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-academy">
+        <div class="section-header">
+          <h2>Te vi na academia</h2>
+          <a href="#" class="link-more">Ver todos <span class="arrow">→</span></a>
+        </div>
+        <div class="people-grid">
+          <div class="person-card">
+            <div class="person-photo">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%23FF6B9D'/%3E%3C/svg%3E" alt="Luiza">
+            </div>
+            <h4>Luiza Ferraz</h4>
+            <p>Unidade Paulista</p>
+            <button class="btn-follow">Seguir</button>
+          </div>
+          <div class="person-card">
+            <div class="person-photo">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ccircle cx='60' cy='60' r='60' fill='%234A90E2'/%3E%3C/svg%3E" alt="Paula">
+            </div>
+            <h4>Paula Ambrósio</h4>
+            <p>Unidade Paulista</p>
+            <button class="btn-follow">Seguir</button>
+          </div>
+        </div>
+      </section>
+
+      <nav class="bottom-nav">
+        <div class="nav-item active">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFC107">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+          </svg>
+          <span class="nav-label">Início</span>
+        </div>
+        <div class="nav-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+          </svg>
+          <span class="nav-label">Saúde</span>
+        </div>
+        <div class="nav-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666">
+            <path d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"/>
+          </svg>
+          <span class="nav-label">Treino</span>
+        </div>
+        <div class="nav-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+          </svg>
+          <span class="nav-label">Desafios</span>
+        </div>
+        <div class="nav-item">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#666">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+          <span class="nav-label">Mais</span>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Tela 2: Story Aline -->
+    <div id="screen-story-aline" class="screen story-screen">
+      <div class="story-progress">
+        <div class="progress-bar filled"></div>
+        <div class="progress-bar"></div>
+        <div class="progress-bar"></div>
+        <div class="progress-bar"></div>
+      </div>
+      
+      <div class="story-header">
+        <div class="user-info">
+          <img class="user-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%23E8B4D4'/%3E%3C/svg%3E" alt="Aline">
+          <div class="user-details">
+            <h3>Aline</h3>
+            <span class="status-live">● treinando agora</span>
+          </div>
+          <button class="btn-ver-perfil">Ver Perfil</button>
+        </div>
+        <button class="btn-close-story">✕</button>
+      </div>
+
+      <div class="story-body">
+        <div class="info-card">
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span>Unidade</span>
+            <span class="info-value">Pinheiros</span>
+          </div>
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+            <span>Entrada</span>
+            <span class="info-value">16:37</span>
+          </div>
+        </div>
+
+        <div class="exercises-card">
+          <div class="exercise-row">
+            <span class="ex-name">Leg Press 45°</span>
+            <span class="ex-sets">3×12 • 80kg</span>
+            <span class="ex-status up">↗</span>
+          </div>
+          <div class="exercise-row">
+            <span class="ex-name">Agachamento livre</span>
+            <span class="ex-sets">3×12 • 80kg</span>
+            <span class="ex-status down">↘</span>
+          </div>
+          <div class="exercise-row">
+            <span class="ex-name">Afundo isométrico</span>
+            <span class="ex-sets">3×60s</span>
+            <span class="ex-status neutral">−</span>
+          </div>
+          <div class="exercise-row">
+            <span class="ex-name">Búlgaro</span>
+            <span class="ex-sets">3×12 • 80kg</span>
+            <span class="ex-status neutral">−</span>
+          </div>
+          <div class="exercise-row">
+            <span class="ex-name">Abdutor</span>
+            <span class="ex-sets">3×12 • 80kg</span>
+            <span class="ex-status up">↗</span>
+          </div>
+          <div class="exercise-row">
+            <span class="ex-name">Extensor</span>
+            <span class="ex-sets">3×12 • 80kg</span>
+            <span class="ex-status up">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-footer">
+        <h3>Quer copiar o treino da Aline?</h3>
+        <div class="copy-training">
+          <div class="copy-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='70'%3E%3Crect width='70' height='70' fill='%23FFA000'/%3E%3C/svg%3E" alt="Treino">
+          </div>
+          <div class="copy-info">
+            <h4>Costas e Ombros</h4>
+            <p>35 min · 12 exercícios</p>
+          </div>
+          <button class="btn-copy">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+              <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tela 3: Ad AERA -->
+    <div id="screen-ad" class="screen story-screen">
+      <div class="story-progress">
+        <div class="progress-bar filled"></div>
+        <div class="progress-bar filled"></div>
+        <div class="progress-bar"></div>
+        <div class="progress-bar"></div>
+      </div>
+      
+      <button class="btn-close-story alone">✕</button>
+
+      <div class="ad-container">
+        <div class="ad-brand">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          <h1>AERA</h1>
+        </div>
+        <p class="ad-description">O pilates te ajuda estabilização profunda, prevenção de lesão</p>
+        <button class="btn-ad-cta">Comprar Aula</button>
+        
+        <div class="ad-product">
+          <div class="product-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='500'%3E%3Crect width='350' height='500' fill='%23C8E6F5'/%3E%3Ccircle cx='175' cy='250' r='100' fill='%23A8D5EA'/%3E%3C/svg%3E" alt="AERA Product">
+          </div>
+          <button class="btn-comprar-aula">Comprar Aula</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tela 4: Story Vitor -->
+    <div id="screen-story-vitor" class="screen story-screen">
+      <div class="story-progress">
+        <div class="progress-bar filled"></div>
+        <div class="progress-bar filled"></div>
+        <div class="progress-bar filled"></div>
+        <div class="progress-bar"></div>
+      </div>
+      
+      <div class="story-header">
+        <div class="user-info">
+          <div class="user-avatar-wrapper">
+            <img class="user-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Ccircle cx='24' cy='24' r='24' fill='%234A90E2'/%3E%3C/svg%3E" alt="Vitor">
+            <div class="badge-race">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="user-details">
+            <h3>Vitor</h3>
+            <span class="status-live">Treinou no Race</span>
+          </div>
+          <button class="btn-ver-perfil">Ver Perfil</button>
+        </div>
+        <button class="btn-close-story">✕</button>
+      </div>
+
+      <div class="story-body">
+        <div class="info-card">
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span>Unidade</span>
+            <span class="info-value">Pinheiros</span>
+          </div>
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+            <span>Entrada</span>
+            <span class="info-value">16:37</span>
+          </div>
+        </div>
+
+        <div class="race-card">
+          <div class="race-header">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="white">
+              <path d="M7 2v11h3v9l7-12h-4l4-8z"/>
+            </svg>
+            <h2>RACE</h2>
+          </div>
+          <p class="race-text">O nosso objetivo é de desafiar</p>
+          <button class="btn-comprar-aula-race" id="btn-comprar">Comprar Aula</button>
+          <div class="race-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='300'%3E%3Crect width='350' height='300' fill='%23DC143C'/%3E%3C/svg%3E" alt="RACE">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tela 5: Comprar Aula -->
+    <div id="screen-buy" class="screen">
+      <div class="buy-hero">
+        <div class="hero-image">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='414' height='300'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23667eea;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23764ba2;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='414' height='300' fill='url(%23grad1)'/%3E%3C/svg%3E" alt="Hero">
+          <span class="tag-countdown">+30</span>
+        </div>
+      </div>
+
+      <div class="studios-icons">
+        <div class="studio-icon"></div>
+        <div class="studio-icon"></div>
+        <div class="studio-icon active"></div>
+        <div class="studio-icon"></div>
+        <div class="studio-icon"></div>
+        <div class="studio-icon"></div>
+      </div>
+
+      <div class="buy-content">
+        <h1>Complemente seu treino principal com aulas</h1>
+        <p class="buy-subtitle">Compre agora seus créditos adicionais e garanta seu lugar nas aulas dos studios que transformam seu corpo e elevam sua energia.</p>
+
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <span>Crédito aula</span>
+            <span class="price">R$ 39,90</span>
+          </div>
+          
+          <div class="quantity-control">
+            <button class="btn-minus">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M19 13H5v-2h14v2z"/>
+              </svg>
+            </button>
+            <div class="quantity-display">
+              <span class="qty-num" id="qty">2</span>
+              <span class="qty-label">Créditos</span>
+            </div>
+            <button class="btn-plus">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+              </svg>
+            </button>
+          </div>
+
+          <button class="btn-comprar-main">Comprar</button>
+        </div>
+
+        <div class="velocity-card">
+          <div class="velocity-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='200'%3E%3Crect width='350' height='200' fill='%23222'/%3E%3C/svg%3E" alt="Velocity">
+          </div>
+          <div class="velocity-content">
+            <h3>VELO<span class="infinity">∞</span>ITY</h3>
+            <p>Criamos metas e evoluímos juntos. Na batida da música, fazemos giros acelerados e vencemos qualquer desafio em cima da bike!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="home-indicator"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

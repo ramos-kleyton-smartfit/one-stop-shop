@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Smart Fit - Academia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Tela 1: Home -->
+    <div id="screen-home" class="screen active">
+      <img src="home.svg" class="screen-bg" alt="Home">
+      <div class="clickable-story" data-screen="story-aline"></div>
+    </div>
+
+    <!-- Tela 2: Story Aline -->
+    <div id="screen-story-aline" class="screen">
+      <img src="story-aline.svg" class="screen-bg" alt="Story Aline">
+      <button class="btn-close" data-action="close">✕</button>
+      <div class="click-advance" data-screen="ad"></div>
+    </div>
+
+    <!-- Tela 3: Ad AERA -->
+    <div id="screen-ad" class="screen">
+      <img src="ad-aera.svg" class="screen-bg" alt="Ad AERA">
+      <button class="btn-close" data-action="close">✕</button>
+      <div class="click-advance" data-screen="story-vitor"></div>
+    </div>
+
+    <!-- Tela 4: Story Vitor -->
+    <div id="screen-story-vitor" class="screen">
+      <img src="story-vitor.svg" class="screen-bg" alt="Story Vitor">
+      <button class="btn-close" data-action="close">✕</button>
+      <a href="#comprar" class="btn-comprar-aula" data-screen="buy">Comprar Aula</a>
+    </div>
+
+    <!-- Tela 5: Comprar Aula -->
+    <div id="screen-buy" class="screen">
+      <img src="comprar.svg" class="screen-bg" alt="Comprar Aula">
+      <!-- Hotspots invisíveis para controles -->
+      <div class="hotspot-qty-minus" data-action="minus"></div>
+      <div class="hotspot-qty-plus" data-action="plus"></div>
+      <div class="hotspot-btn-comprar" data-action="buy"></div>
+      <!-- Display de quantidade sobreposto -->
+      <span class="qty-overlay" id="qty">2</span>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
