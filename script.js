@@ -132,6 +132,9 @@ document.addEventListener('click', (e) => {
   } else if (action === 'buy') {
     const total = (quantity * 39.90).toFixed(2);
     alert(`✅ Compra realizada!\n\n${quantity} crédito${quantity > 1 ? 's' : ''} de aula\nTotal: R$ ${total}`);
+  } else if (action === 'reload') {
+    console.log('🔄 Reload da última tela!');
+    location.reload();
   }
 });
 
@@ -164,7 +167,12 @@ function handleSwipe() {
       if (clickAdvance) {
         const nextScreen = clickAdvance.dataset.screen;
         if (nextScreen) {
-          showScreen(nextScreen, 'forward');
+          // Se estiver na tela final indo para home, faz refresh
+          if (currentScreen === 'final' && nextScreen === 'home') {
+            location.reload();
+          } else {
+            showScreen(nextScreen, 'forward');
+          }
         }
       }
     }
@@ -194,7 +202,14 @@ document.addEventListener('click', (e) => {
     if (clickAdvance && clickX >= screenWidth / 3) {
       const nextScreen = clickAdvance.dataset.screen;
       if (nextScreen) {
-        showScreen(nextScreen, 'forward');
+        console.log(`🔍 Current: ${currentScreen}, Next: ${nextScreen}`);
+        // Se estiver na tela final indo para home, faz refresh
+        if (currentScreen === 'final' && nextScreen === 'home') {
+          console.log('🔄 Refresh da página!');
+          location.reload();
+        } else {
+          showScreen(nextScreen, 'forward');
+        }
       }
     }
   }
