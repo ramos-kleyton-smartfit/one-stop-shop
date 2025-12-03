@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Smart Fit - Academia</title>
+  <link rel="preload" href="home.svg" as="image">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,7 +24,7 @@
     <!-- Tela 3: Ad AERA -->
     <div id="screen-ad" class="screen">
       <img src="ad-aera.svg" class="screen-bg" alt="Ad AERA">
-      <video class="video-aera" autoplay loop muted playsinline preload="auto">
+      <video class="video-aera" autoplay loop muted playsinline preload="none">
         <source src="aera.mp4" type="video/mp4">
         <source src="aera.mov" type="video/quicktime">
       </video>
@@ -45,6 +46,12 @@
       <div class="hotspot-qty-minus" data-action="minus"></div>
       <div class="hotspot-qty-plus" data-action="plus"></div>
       <div class="hotspot-btn-comprar" data-action="buy"></div>
+      <div class="click-advance" data-screen="final"></div>
+    </div>
+
+    <!-- Tela 6: Final (12.svg) -->
+    <div id="screen-final" class="screen">
+      <img src="12.svg" class="screen-bg" alt="Final">
     </div>
   </div>
 
