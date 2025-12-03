@@ -100,14 +100,77 @@ body {
 
 .clickable-story {
   position: absolute;
-  top: 120px;
-  left: 98px;
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
   z-index: 10;
 }
+
+/* Vídeo AERA */
+.video-aera {
+  position: absolute;
+  top: 214.984px;
+  left: 32px;
+  width: 350px;
+  height: 557px;
+  border-radius: 24px;
+  object-fit: cover;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* Botão Comprar Aula sobre o vídeo AERA */
+.btn-comprar-aula-aera {
+  position: absolute;
+  top: 690px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 14px 0;
+  width: 310px;
+  background: #FFC928;
+  border: none;
+  border-radius: 8px;
+  color: #1A1A1A;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 100;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(255, 201, 40, 0.4);
+}
+
+.btn-comprar-aula-aera:hover {
+  background: #FFD147;
+}
+
+.btn-comprar-aula-2 {
+  position: absolute;
+  top: 155px;
+  right: 30px;
+  padding: 11px 22px;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 22px;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 150;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+
 
 /* Botão Comprar Aula (Story Vitor) */
 .btn-comprar-aula {

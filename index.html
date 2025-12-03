@@ -17,22 +17,25 @@
     <!-- Tela 2: Story Aline -->
     <div id="screen-story-aline" class="screen">
       <img src="story-aline.svg" class="screen-bg" alt="Story Aline">
-      <button class="btn-close" data-action="close">✕</button>
-      <div class="click-advance" data-screen="ad"></div>
+       <div class="click-advance" data-screen="ad"></div>
     </div>
 
     <!-- Tela 3: Ad AERA -->
     <div id="screen-ad" class="screen">
       <img src="ad-aera.svg" class="screen-bg" alt="Ad AERA">
-      <button class="btn-close" data-action="close">✕</button>
+      <video class="video-aera" autoplay loop muted playsinline preload="auto">
+        <source src="aera.mp4" type="video/mp4">
+        <source src="aera.mov" type="video/quicktime">
+      </video>
+      <a href="#comprar" class="btn-comprar-aula-2" data-screen="buy">Comprar Aula</a>
+      <a href="#comprar" class="btn-comprar-aula-aera" data-screen="buy">Comprar Aula</a>
       <div class="click-advance" data-screen="story-vitor"></div>
     </div>
 
     <!-- Tela 4: Story Vitor -->
     <div id="screen-story-vitor" class="screen">
       <img src="story-vitor.svg" class="screen-bg" alt="Story Vitor">
-      <button class="btn-close" data-action="close">✕</button>
-      <a href="#comprar" class="btn-comprar-aula" data-screen="buy">Comprar Aula</a>
+       <a href="#comprar" class="btn-comprar-aula" data-screen="buy">Comprar Aula</a>
     </div>
 
     <!-- Tela 5: Comprar Aula -->

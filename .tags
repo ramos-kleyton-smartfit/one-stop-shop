@@ -59,7 +59,6 @@ anonymousObject49e740130105.attributes	old/script.js	/^    attributes: true,$/;"
 attributeFilter	old/script.js	/^    attributeFilter: ['class']$/;"	p	variable:anonymousObject49e740130105
 attributes	old/script.js	/^    attributes: true,$/;"	p	variable:anonymousObject49e740130105
 btnComprar	old/script.js	/^const btnComprar = document.getElementById('btn-comprar');$/;"	C
-btnComprar	script.js	/^const btnComprar = document.querySelector('.btn-comprar-main');$/;"	C
 btnComprarMain	old/script.js	/^const btnComprarMain = document.querySelector('.btn-comprar-main');$/;"	C
 btnMinus	old/script.js	/^const btnMinus = document.querySelector('.btn-minus');$/;"	C
 btnPlus	old/script.js	/^const btnPlus = document.querySelector('.btn-plus');$/;"	C
@@ -68,6 +67,8 @@ closeBtns	old/script.js	/^const closeBtns = document.querySelectorAll('.btn-clos
 currentScreen	old/script.js	/^let currentScreen = 'home';$/;"	v
 currentScreen	script.js	/^let currentScreen = 'home';$/;"	v
 home	old/script.js	/^  home: document.getElementById('screen-home'),$/;"	p	variable:screens
+imagesToPreload	script.js	/^const imagesToPreload = [$/;"	v
+img	script.js	/^  const img = new Image();$/;"	C
 observer	old/script.js	/^const observer = new MutationObserver((mutations) => {$/;"	C
 originalText	old/script.js	/^    const originalText = btnComprarMain.textContent;$/;"	C
 qtyDisplay	old/script.js	/^const qtyDisplay = document.getElementById('qty');$/;"	C

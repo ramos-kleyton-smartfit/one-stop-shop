@@ -30,6 +30,16 @@ function showScreen(screenId) {
     currentScreen = screenId;
     console.log(`✓ Tela ativa: ${screenId}`);
     
+    // Se for a tela do vídeo AERA, carregar e reproduzir
+    if (screenId === 'ad') {
+      const video = screen.querySelector('.video-aera');
+      if (video) {
+        video.load();
+        video.play().catch(err => console.log('Erro ao reproduzir vídeo:', err));
+        console.log('🎬 Vídeo AERA iniciado');
+      }
+    }
+    
     // Verificar se a imagem carregou
     const img = screen.querySelector('.screen-bg');
     if (img) {
